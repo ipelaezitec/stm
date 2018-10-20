@@ -1,0 +1,48 @@
+$first-color:#343435;
+$second-color:rgb(223, 164, 3);
+
+$montserrat : 'Montserrat', sans-serif;
+$raleway : 'Raleway', sans-serif;
+
+// $second-color: rgb(255, 187, 0);
+// %message-shared {
+//   border: 1px solid #ccc;
+//   padding: 10px;
+//   color: #333;
+// }
+
+// .message {
+//   @extend %message-shared;
+// }
+
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+ 
+#{$a-tags} {
+  color: white;
+  text-decoration: none;
+}
+#{$a-tags-hover} {
+  color: white;
+  text-decoration: none;
+}
+
+.header{
+  min-height: 40px;
+  background-color: $first-color;
+  margin-top: 0px;
+  color: white;
+  a{
+    font-size: 30px;
+    color: $second-color;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+}
+
+.raleway-font{
+  font-family: $montserrat ;
+  
+}
+
