@@ -3,6 +3,7 @@ $second-color:rgb(223, 164, 3);
 
 $montserrat : 'Montserrat', sans-serif;
 $raleway : 'Raleway', sans-serif;
+$poppins : 'Poppins', sans-serif;
 
 // $second-color: rgb(255, 187, 0);
 // %message-shared {
@@ -29,20 +30,20 @@ $a-tags-hover: 'a:active, a:hover';
 }
 
 .header{
-  min-height: 40px;
+  // min-height: 40px;
   background-color: $first-color;
   margin-top: 0px;
   color: white;
   a{
     font-size: 30px;
     color: $second-color;
-    font-weight: 700;
+    font-weight: bolder;
     letter-spacing: 0.2em;
   }
 }
 
 .raleway-font{
-  font-family: $montserrat ;
+  font-family: $poppins;
   
 }
 
