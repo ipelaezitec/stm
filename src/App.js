@@ -46,7 +46,7 @@ class App extends Component {
         <Header/>
         <Container>
           <Row>
-            <Col sm="3" className="test1 m-2">
+            <Col sm="3" className="m-2">
               <ProjectForm/>
             </Col>
             <Col className="right-panel m-2">

@@ -7,10 +7,13 @@ class ProjectForm extends Component{
   
   constructor(props) {
     super(props);
-    this.state = {value: ''};
-
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    // this.state = {value: ''};
+    this.state={
+      name:"",
+      brief:"",
+      file:"",
+      git:"",
+    }
   }
 
   handleChange = (event)=> {
@@ -18,8 +21,21 @@ class ProjectForm extends Component{
   }
 
   handleSubmit = (event) => {
-    alert('A name was submitted: ' + this.state.value);
+    alert('A name was submitted: ' + this.state.name + this.state.brief + this.state.git);
     event.preventDefault();
+  }
+
+  handleInputChange = (event) => {
+    const target = event.target;
+    
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    console.log(value);
+    const name = target.name;
+    console.log(name);
+
+    this.setState({
+      [name]: value
+    });
   }
 
   render() {
@@ -27,11 +43,11 @@ class ProjectForm extends Component{
       <Form className="font border p-3 mt-1" onSubmit={this.handleSubmit}>
         <FormGroup>
           <Label>Name:</Label>
-          <Input type="text" value={this.state.value} onChange={this.handleChange} />
+          <Input type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
         </FormGroup>
         <FormGroup>
           <Label for="exampleText">Brief:</Label>
-          <Input type="textarea" name="text" id="exampleText" value={this.state.value} onChange={this.handleChange}  />
+          <Input type="textarea" name="brief" id="exampleText" value={this.state.brief} onChange={this.handleInputChange}  />
         </FormGroup>
         <FormGroup>
           <Label for="exampleFile">Imagen del proyecto.</Label>
@@ -42,7 +58,7 @@ class ProjectForm extends Component{
         </FormGroup>
         <FormGroup>
           <Label>Git (opcional):</Label>
-          <Input type="text" value={this.state.value} onChange={this.handleChange} />
+          <Input type="text" name="git" value={this.state.git} onChange={this.handleInputChange} />
         </FormGroup>
 
         <Input type="submit" value="Crear" />
